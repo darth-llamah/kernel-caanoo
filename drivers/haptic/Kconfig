@@ -1,0 +1,18 @@
+#
+# HAPTIC driver configuration
+#
+menuconfig HAPTIC
+	bool "HAPTIC support"
+	help
+	  Say Y to enalbe haptic support. It enables the haptic and controlled
+	  from both userspace and kernel
+
+if HAPTIC
+
+config SIMPLE_ISA1200_DRIVER
+	tristate "ISA1200 - Simple Haptic Driver"
+	depends on I2C
+	help
+	  This option enables the simple haptic driver that uses only devfs and it controled by ioctl() function.
+
+endif

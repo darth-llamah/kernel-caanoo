@@ -1,0 +1,60 @@
+if ARCH_POLLUX
+
+menu "POLLUX Implementations"
+
+config MACH_AESOP_POLLUX
+	bool "AESOP Pollux Reference Kit"
+	default y
+	select ISA
+	help
+	  Say Y here if you are using the AESOP pollux(of Magiceyes) implementation
+
+	  Product page: <http://www.aesop-embedded.org>.
+
+config ARCH_ADD_GPH_N35
+	bool "Game park holdings POLLUX(LF1000) hand game machine"
+
+endmenu
+
+choice
+        prompt "Pollux Shadow(bootmode) setting"
+        depends on ARCH_POLLUX
+        help
+           Pollux boot mode selection(Memory map changed)
+
+config POLLUX_SHADOW_ONE
+	bool "shadow=1:NAND boot"
+	help
+	  Shadow is 1(nand boot mode), see Pollux Datasheet
+
+config POLLUX_SHADOW_ZERO
+	bool "shadow=0:NOR boot"
+	help
+	  Shadow is 0(NOR boot mode), see Pollux Datasheet
+	  
+endchoice
+
+config POLLUX_KERNEL_BOOT_MESSAGE_ENABLE
+    bool "Kernel boot message enable"
+    default y
+
+config POLLUX_FAST_BOOT_ENABLE
+    bool "Apply Fast Boot enable"
+    default n
+    help
+        MTD driver for this mode is selected, the bad block is
+        processed in the CRAMFS area.
+        
+config POLLUX_LOWLEVEL_UART_PORT
+	int "Pollux UART to use for low-level messages"
+	default 0
+	help
+	  Choice of which UART port to use for the low-level messages,
+	  such as the `Uncompressing...` at start time. The value of
+	  this configuration should be between zero and two. The port
+	  must have been initialised by the boot-loader before use.
+
+	  Note, this does not affect the port used by the debug messages,
+	  which is a separate configuration.
+
+endif

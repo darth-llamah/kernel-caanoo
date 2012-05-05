@@ -1,0 +1,248 @@
+Hit any key to stop autoboot:  0 
+DM9000 work in 16 bus width
+11:0:33:22:55:44:TFTP from server 192.168.0.250; our IP address is 192.168.0.100
+Filename 'uImage'.
+Load address: 0x2000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #####
+done
+Bytes transferred = 3352084 (332614 hex)
+## Booting image at 02000000 ...
+   Image Name:   Linux-2.6.20-pollux
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    3352020 Bytes =  3.2 MB
+   Load Address: 00008000
+   Entry Point:  00008000
+   Verifying Checksum ... OK
+OK
+No initrd
+## Transferring control to Linux (at address 00008000) ...
+
+Starting kernel ...
+
+Linux version 2.6.20-pollux (root@pollux) (gcc version 4.0.2) #110 Tue Apr 22 15:53:51 KST 2008
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+Machine: AESOP_POLLUX
+Memory policy: ECC disabled, Data cache writeback
+clkmodereg = 0x04210480
+pollux_cmr.cpu0_div    = 0
+pollux_cmr.cpu0_src_pll= 0
+pollux_cmr.cpu0_AHB_div= 2
+pollux_cmr.bclk_div    = 2
+pollux_cmr.bclk_src_pll= 0
+pollux_cmr.pll_pdown1  = 0
+pll 0 = 380000000
+pll 1 = 147461538
+ARM926 fclk      = 380000000 Hz
+ARM926 AHB clock = 126666666 Hz
+       BCLK      = 126666666 Hz
+       PCLK      =  63333333 Hz
+   DRAM CLK      =  63333333 Hz
+CPU0: D VIVT write-back cache
+CPU0: I cache: 16384 bytes, associativity 4, 32 byte lines, 128 sets
+CPU0: D cache: 16384 bytes, associativity 4, 32 byte lines, 128 sets
+Built 1 zonelists.  Total pages: 16256
+Kernel command line: mem=64M root=/dev/nfs rw nfsroot=192.168.0.250:/root/gwork/rootfs ip=192.168.0.100:192.168.0.250:192.168.0.1:255.255.255.0:godori:eth0:off console=ttySAC0,115200n81 ethaddr=08:00:3e:26:0a:5b
+PID hash table entries: 256 (order: 8, 1024 bytes)
+Console: colour dummy device 80x30
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 61440KB available (2812K code, 509K data, 112K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+NetWinder Floating Point Emulator V0.97 (double precision)
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+io scheduler noop registered
+io scheduler anticipatory registered (default)
+io scheduler deadline registered
+io scheduler cfq registered
+pollux-uart.0: pollux_serial0 at MMIO 0xf0016000 (irq = 44) is a POLLUX
+pollux-uart.1: pollux_serial1 at MMIO 0xf0016080 (irq = 48) is a POLLUX
+pollux-uart.2: pollux_serial2 at MMIO 0xf0016800 (irq = 52) is a POLLUX
+pollux-uart.3: pollux_serial3 at MMIO 0xf0016880 (irq = 56) is a POLLUX
+RAMDISK driver initialized: 1 RAM disks of 8192K size 1024 blocksize
+loop: loaded (max 8 devices)
+nbd: registered device at major 43
+<DM9KS> I/O: f3000000, VID: 90000a46 
+eth%d: Ethernet addr: 11:00:22:33:44:55
+Linux video capture interface: v2.00
+Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+ide: Assuming 50MHz system bus speed for PIO modes; override with idebus=xx
+usbmon: debugfs is not available
+Initializing USB Mass Storage driver...
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usbcore: registered new interface driver usbhid
+drivers/usb/input/hid-core.c: v2.6:USB HID core driver
+mice: PS/2 mouse device common for all mice
+i2c /dev entries driver
+MagicEyes POLLUX I2C Bus driver
+pollux-i2c pollux-i2c.0: i2c-0: POLLUX I2C adapter
+======================mmc: c3d27400, private: c3d275e0, sizeof(private) = 0
+==================host: c3d275e0
+sdmmc_SetClock.702: MES_ASSERT error
+MES_SDHC_SetOutputClockDivider.1190: MES_ASSERT error
+initialization done.
+TCP cubic registered
+NET: Registered protocol family 1
+sdmmc_SetClock.702: MES_ASSERT error
+MES_SDHC_SetOutputClockDivider.1190: MES_ASSERT error
+host->mrq->cmd->opcode = 0x0: 0
+longresp[0] = 0x0
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x8: 8
+longresp[0] = 0x1aa
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x120
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x29: 41
+longresp[0] = 0xff8000
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x0: 0
+longresp[0] = 0xff8000
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x8: 8
+longresp[0] = 0x1aa
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x120
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x29: 41
+longresp[0] = 0xff8000
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x120
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x29: 41
+longresp[0] = 0x80ff8000
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x2: 2
+longresp[0] = 0xf1000020
+longresp[1] = 0x20202020
+longresp[2] = 0xa800
+longresp[3] = 0xb4006ca5
+host->mrq->cmd->opcode = 0x3: 3
+longresp[0] = 0x20500
+longresp[1] = 0xa800
+longresp[2] = 0x20202020
+longresp[3] = 0xf1000020
+host->mrq->cmd->opcode = 0x9: 9
+longresp[0] = 0x2f0132
+longresp[1] = 0x5f5983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+host->mrq->cmd->opcode = 0x7: 7
+longresp[0] = 0x700
+longresp[1] = 0xf6db9fff
+longresp[2] = 0x5f5983c8
+longresp[3] = 0x2f0132
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x920
+longresp[1] = 0xf6db9fff
+longresp[2] = 0x5f5983c8
+longresp[3] = 0x2f0132
+host->mrq->cmd->opcode = 0x33: 51
+longresp[0] = 0x920
+longresp[1] = 0xf6db9fff
+longresp[2] = 0x5f5983c8
+longresp[3] = 0x2f0132
+host->mrq->cmd->opcode = 0x10: 16
+longresp[0] = 0x900
+longresp[1] = 0xf6db9fff
+longresp[2] = 0x5f5983c8
+longresp[3] = 0x2f0132
+mmc_blk_probe(): AAAAAAAAAAAAAAAAAAAAAAAAAa
+mmcblk0: mmc0:0002       992256KiB 
+ mmcblk0:<7>mmc0: starting CMD18 arg 00000000 flags 00000035
+host->mrq->cmd->opcode = 0x12: 18
+longresp[0] = 0x900
+longresp[1] = 0xf6db9fff
+longresp[2] = 0x5f5983c8
+longresp[3] = 0x2f0132
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+mmcblk0: error 1 sending read/write command
+end_request: I/O error, dev mmcblk0, sector 0
+Buffer I/O error on device mmcblk0, logical block 0
+host->mrq->cmd->opcode = 0x12: 18
+longresp[0] = 0x400900
+longresp[1] = 0xb00
+longresp[2] = 0x5f5983c8
+longresp[3] = 0x2f0132
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+host->mrq->cmd->opcode = 0xc: 12
+mmcblk0: error 1 sending read/write command
+end_request: I/O error, dev mmcblk0, sector 0
+Buffer I/O error on device mmcblk0, logical block 0
+ unknown partition table
+IP-Config: Complete:
+      device=eth0, addr=192.168.0.100, mask=255.255.255.0, gw=192.168.0.1,
+     host=godori, domain=, nis-domain=(none),
+     bootserver=192.168.0.250, rootserver=192.168.0.250, rootpath=
+Looking up port of RPC 100003/2 on 192.168.0.250
+Looking up port of RPC 100005/1 on 192.168.0.250
+VFS: Mounted root (nfs filesystem).
+Freeing init memory: 112K
+INIT: version 2.84 booting
+rc.udev start
+Initializing udev dynamic device directory.
+Starting udevd:  /sbin/udevd --daemon
+mount: Mounting /dev/root on / failed: No such file or directory
+INIT: Entering runlevel: 3
+
+ 
+AESOP Linux 
+ 
+ /) /) 
+(='.'=) <- godori
+ 
+login[535]: root login  on `tts/0'
+

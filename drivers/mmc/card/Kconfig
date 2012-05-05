@@ -1,0 +1,25 @@
+#
+# MMC/SD card drivers
+#
+
+comment "MMC/SD Card Drivers"
+	depends on MMC
+
+config MMC_BLOCK
+	tristate "MMC block device driver"
+	depends on MMC && BLOCK
+	default y
+	help
+	  Say Y here to enable the MMC block device driver support.
+	  This provides a block device driver, which you can use to
+	  mount the filesystem. Almost everyone wishing MMC support
+	  should say Y or M here.
+
+config MMC_ND_CHAR
+	tristate "Direct char device access to mmc nd_card devices"
+	depends on MMC
+	default y
+	help
+	  This provides a character device for each mmc_nd_device present in
+	  the system, allowing the user to read and write directly to the
+	  memory chips.

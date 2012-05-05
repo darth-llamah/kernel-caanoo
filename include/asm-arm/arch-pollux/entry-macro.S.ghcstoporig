@@ -1,0 +1,78 @@
+/*
+ * include/asm-arm/arch-pollux/entry-macro.S
+ *
+ * Low-level IRQ helper macros for POLLUX-based platforms
+ *
+ * This code from mp2520f linux kernel
+ *
+ * godori(Ko Hyun Chul), omega5 - project manager
+ * nautilus_79(Lee Jang Ho)     - main programmer
+ * amphell(Bang Chang Hyeok)    - Hardware Engineer
+ *
+ * This file is licensed under  the terms of the GNU General Public
+ * License version 2. This program is licensed "as is" without any
+ * warranty of any kind, whether express or implied.
+
+ * Modifications:
+ *     10-Mar-2005 LCVR  Changed S3C2410_VA to S3C24XX_VA
+ */
+
+#include <asm/hardware.h>
+
+
+	.macro  disable_fiq
+	.endm
+
+	.macro  get_irqnr_and_base, irqnr, irqstat, base, tmp
+        mov r4, #0xf0000000 @ virtual address of IRQ registers
+        orr r4, r4, #0x00000800     @ interrupt controller base address(phys: 0xc000_0800
+
+		ldr \irqstat, [r4, #0x20]   @ read INTPND low register, phys 0xc000_0820
+		teq \irqstat, #0            @ if interrupt pend low register == 0, seek pend high register
+		beq 2000f                   @ jump to pend high register routine
+		
+
+1000:
+        ldr \irqnr,   [r4, #0x10]   @ read INTMSK low register
+        //ldr \irqstat, [r4, #0x20]   @ read INTPND low register, 
+
+        bics    \irqstat, \irqstat, \irqnr
+        bics    \irqstat, \irqstat, \irqnr
+        beq 1002f
+
+        mov \irqnr, #0
+1001:       tst \irqstat, #1
+        bne 1002f           @ found IRQ
+        add \irqnr, \irqnr, #1
+        mov \irqstat, \irqstat, lsr #1
+        cmp \irqnr, #32     @ irq : 0~31
+        bcc 1001b
+        b   1002f
+        
+2000:   ldr \irqnr,   [r4, #0x14]   @ read INTMSK high register
+        ldr \irqstat, [r4, #0x24]   @ read INTPND high register
+
+        bics    \irqstat, \irqstat, \irqnr
+        bics    \irqstat, \irqstat, \irqnr
+        beq 1002f                   @ if masked, just return 
+
+        mov \irqnr, #0
+2001:       tst \irqstat, #1
+        bne 2002f           @ found IRQ
+        add \irqnr, \irqnr, #1
+        mov \irqstat, \irqstat, lsr #1
+        cmp \irqnr, #12     @ irq : 0~11, irqnr: 32 ~ 43
+        bcc 2001b
+        b   1002f
+
+2002:   add \irqnr, \irqnr, #32     @ It does pend high register, plus 32
+        
+1002:
+
+	.endm
+
+	.macro  irq_prio_table
+	.endm
+	
+	
+

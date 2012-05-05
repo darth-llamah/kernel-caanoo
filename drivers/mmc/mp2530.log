@@ -1,0 +1,181 @@
+======================mmc: c0553800, bus_refs: c05539c4, private: c05539e0, sizeof(private) = 0
+sizeof(mmc_host) = 480
+==================host: c05539e0
+MMC_POWER_OFF
+ios-->clock = 0
+bus_width = 0
+initialization done.
+ac97_codec: AC97 Audio codec, id: WML18 (Wolfson WM9711/9712)
+ios-->clock = 0
+bus_width = 0
+MMC_POWER_ON
+ios-->clock = 450000
+SD/MMC New clock value: 450000 / prescaler is 147
+bus_width = 0
+MMC_POWER_ON
+ios-->clock = 450000
+bus_width = 0
+host->mrq->cmd->opcode = 0x0: 0
+longresp[0] = 0x0
+longresp[1] = 0x0
+longresp[2] = 0x0
+longresp[3] = 0x0
+MMC_POWER_ON
+ios-->clock = 450000
+bus_width = 0
+host->mrq->cmd->opcode = 0x8: 8
+longresp[0] = 0x1aa
+longresp[1] = 0x13000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x120
+longresp[1] = 0x83000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x29: 41
+longresp[0] = 0xff8000
+longresp[1] = 0xff000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+MMC_POWER_ON
+ios-->clock = 450000
+bus_width = 0
+MMC_POWER_ON
+ios-->clock = 450000
+bus_width = 0
+host->mrq->cmd->opcode = 0x0: 0
+longresp[0] = 0xff8000
+longresp[1] = 0xff000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+MMC_POWER_ON
+ios-->clock = 450000
+bus_width = 0
+host->mrq->cmd->opcode = 0x8: 8
+longresp[0] = 0x1aa
+longresp[1] = 0x13000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x120
+longresp[1] = 0x83000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x29: 41
+TCP cubic registered
+NET: Registered protocol family 1
+longresp[0] = 0xff8000
+longresp[1] = 0xff000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x120
+longresp[1] = 0x83000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x29: 41
+longresp[0] = 0x80ff8000
+longresp[1] = 0xff000000
+longresp[2] = 0x0
+longresp[3] = 0x0
+host->mrq->cmd->opcode = 0x2: 2
+longresp[0] = 0xf1000020
+longresp[1] = 0x20202020
+longresp[2] = 0xa800
+longresp[3] = 0xb4006ca5
+host->mrq->cmd->opcode = 0x3: 3
+longresp[0] = 0x20500
+longresp[1] = 0x47202020
+longresp[2] = 0xa800
+longresp[3] = 0xb4006ca5
+MMC_POWER_ON
+ios-->clock = 450000
+bus_width = 0
+host->mrq->cmd->opcode = 0x9: 9
+longresp[0] = 0x2f0132
+longresp[1] = 0x5f5983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+host->mrq->cmd->opcode = 0x7: 7
+longresp[0] = 0x700
+longresp[1] = 0x755983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x920
+longresp[1] = 0x335983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+host->mrq->cmd->opcode = 0x33: 51
+data...............request
+ sg: c0555ed0, sg_len: 1, virt: c0567570, length = 8
+command...51: 0x00002501, 0x00000000
+longresp[0] = 0x920
+longresp[1] = 0x915983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+MMC_POWER_ON
+ios-->clock = 25000000
+SD/MMC New clock value: 25000000 / prescaler is 2
+bus_width = 0
+host->mrq->cmd->opcode = 0x37: 55
+longresp[0] = 0x920
+longresp[1] = 0x335983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+host->mrq->cmd->opcode = 0x6: 6
+longresp[0] = 0x920
+longresp[1] = 0xb95983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+MMC_POWER_ON
+ios-->clock = 25000000
+bus_width = 2
+host->mrq->cmd->opcode = 0x10: 16
+longresp[0] = 0x900
+longresp[1] = 0xb5983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+mmcblk0: mmc0:0002       992256KiB 
+ mmcblk0:host->mrq->cmd->opcode = 0x12: 18
+data...............request
+ sg: c0566d20, sg_len: 1, virt: c05cf000, length = 4096
+longresp[0] = 0x900
+longresp[1] = 0xd35983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+host->mrq->cmd->opcode = 0xc: 12
+longresp[0] = 0xb00
+longresp[1] = 0x7f5983c8
+longresp[2] = 0xf6db9fff
+longresp[3] = 0x9e4000d9
+ p1
+eth0: link down
+IP-Config: Complete:
+      device=eth0, addr=192.168.0.100, mask=255.255.255.0, gw=192.168.0.1,
+     host=192.168.0.100, domain=, nis-domain=(none),
+     bootserver=192.168.0.250, rootserver=192.168.0.250, rootpath=
+Looking up port of RPC 100003/2 on 192.168.0.250
+eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Looking up port of RPC 100005/1 on 192.168.0.250
+VFS: Mounted root (nfs filesystem).
+Freeing init memory: 112K
+INIT: version 2.84 booting
+rc.udev start
+Initializing udev dynamic device directory.
+Starting udevd:  /sbin/udevd --daemon
+mount: Mounting /dev/root on / failed: No such file or directory
+INIT: Entering runlevel: 3
+
+ 
+AESOP Linux 
+ 
+ /) /) 
+(='.'=) <- godori
+ 
+login[600]: root login  on `tts/3'
+
+Using tcal.ko
+tcal: module license 'BSD' taints kernel.
+root@godori:~# 
